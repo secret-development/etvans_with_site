@@ -1092,7 +1092,7 @@ $(document).ready(function() {
     var active_url = new Array();
     var full_url = name.split('?');
     var active_url = full_url[0].toString().split('/');
-    $("a[href='/reports/"+active_url[4]+"']")
+    $("a[href='/etvans/reports/"+active_url[5]+"']")
       .parent()
       .addClass("active-report-tab");
   }
