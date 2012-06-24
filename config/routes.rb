@@ -1,6 +1,8 @@
 # -*- encoding : utf-8 -*-
 Crm::Application.routes.draw do
-
+  
+  match "etvans" => 'results#index'
+  
   scope "/etvans" do
     match "search" => 'results#index'
     
