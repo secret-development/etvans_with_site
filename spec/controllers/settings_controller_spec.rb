@@ -16,7 +16,7 @@ describe SettingsController do
   end
   
   it "routes to settings" do
-    { :get => "/settings" }.
+    { :get => "/etvans/settings" }.
     should route_to(:controller => "settings", :action => "index")
   end
 end

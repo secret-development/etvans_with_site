@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   helper_method :redirect_to
   
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to root_path, :alert => exception.message    
+    redirect_to search_path, :alert => exception.message    
   end
   
   def current_ability
@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
     def settings_deny
       unless current_user.role?
         flash[:alert] = "Запрещено!"
-        redirect_to root_path
+        redirect_to search_path
       end            
     end
   
