@@ -1,6 +1,8 @@
 # -*- encoding : utf-8 -*-
 Crm::Application.routes.draw do
   
+  root :to => "website/pages#index"
+  
   match "etvans" => 'results#index'
   
   scope "/etvans" do

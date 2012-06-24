@@ -2,7 +2,18 @@
 module ApplicationHelper
   include Icons
   require 'simple_form'
+
+  # title for website
+  def w_title
+    if @w_title
+      "Империя квартир | #{@title}"
+    else
+      "Империя квартир"
+    end
+  end
+  # end title for website
   
+  # title for etvans
   def base_title
     "Этванс"
   end
@@ -14,6 +25,8 @@ module ApplicationHelper
       base_title
     end
   end
+  
+  # end title for etvans
   
   
   def error_messages_for(object)
