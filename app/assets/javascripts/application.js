@@ -8,6 +8,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-//= require swfobject
-//= require jquery.uploadify
-//= require_tree .
+//= require_directory ./app
