@@ -10,6 +10,17 @@ describe Website::PagesController do
       response.should be_success
     end
     
+    it "should be success" do
+      get :about
+      response.should be_success
+    end
+
+    it "does something" do
+      get :contacts
+      response.should be_success
+    end
+    
+    
   end
   
 end
