@@ -1,7 +1,12 @@
 # -*- encoding : utf-8 -*-
 Crm::Application.routes.draw do
   
+  # website:
   root :to => "website/pages#index"
+  match "contacts" => "website/pages#contacts"
+  match "about" => "website/pages#about"
+  
+  # app:
   
   match "etvans" => 'results#index'
   
