@@ -2,7 +2,18 @@
 module ApplicationHelper
   include Icons
   require 'simple_form'
+
+  # title for website
+  def w_title
+    if @w_title
+      "Империя квартир | #{@title}"
+    else
+      "Империя квартир"
+    end
+  end
+  # end title for website
   
+  # title for etvans
   def base_title
     "Этванс"
   end
@@ -14,6 +25,8 @@ module ApplicationHelper
       base_title
     end
   end
+  
+  # end title for etvans
   
   
   def error_messages_for(object)
@@ -181,17 +194,17 @@ module ApplicationHelper
   
   def active_subject?(object)
     if object.active == true
-      image_tag('active.png', :title => "Активен", :rel => "tooltip")
+      image_tag('app/active.png', :title => "Активен", :rel => "tooltip")
     else
-      image_tag('busy.png', :title => "Не активен", :rel => "tooltip")
+      image_tag('app/busy.png', :title => "Не активен", :rel => "tooltip")
     end
   end
   
   def customer_act?(object)
     if object.potentials == true
-      image_tag('customer_pot.gif', :title => "Потенциальный клиент", :rel => "tooltip")
+      image_tag('app/customer_pot.gif', :title => "Потенциальный клиент", :rel => "tooltip")
     else
-      image_tag('customer_act.gif', :title => "Действующий клиент", :rel => "tooltip")
+      image_tag('app/customer_act.gif', :title => "Действующий клиент", :rel => "tooltip")
     end
   end
   

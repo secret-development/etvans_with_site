@@ -10,25 +10,25 @@ class Document < ActiveRecord::Base
     @format = doc.file.extension.upcase
     case @format
     when "DOC", "DOCX", "DOT", "DOTX"
-      ("file_doc.png")
+      ("app/file_doc.png")
     when "JPG", "JPEG", "GIF"
-      ("file_jpg.png")
+      ("app/file_jpg.png")
     when "PNG"
-      ("file_png.png")
+      ("app/file_png.png")
     when "BMP"
-      ("file_bmp.png")
+      ("app/file_bmp.png")
     when "PPT", "PPTX"
-      ("file_ppt.png")
+      ("app/file_ppt.png")
     when "RTF"
-      ("file_rtf.png")
+      ("app/file_rtf.png")
     when "TXT"
-      ("file_txt.png")
+      ("app/file_txt.png")
     when "XLSX", "XLS", "XLTX", "XLT", "CSV"
-      ("file_xls.png")
+      ("app/file_xls.png")
     when "XML", "HTM", "HTML"
-      ("file_html.png")
+      ("app/file_html.png")
     when "PDF"
-      ("file_pdf.png")
+      ("app/file_pdf.png")
     end
   end
   

@@ -76,7 +76,7 @@ $(document).ready(function() {
   $("#man-called-but").click(function(event) {
     var customer_id = $(this).attr("data-customer-id");
     $.ajax({
-      url: '/customers/lastcallcustomer',
+      url: '/etvans/customers/lastcallcustomer',
       type: 'POST',
       dataType: 'json',
       data: {id: customer_id },
@@ -295,7 +295,7 @@ $(document).ready(function() {
   $("#subject_typesubject_id").change(function(event) {
     var typesubject_id = $(this).attr("value");
     $.ajax({
-      url: '/subjects/findtypesubject',
+      url: '/etvans/subjects/findtypesubject',
       type: 'POST',
       dataType: 'json',
       data: {id: typesubject_id},
@@ -332,7 +332,7 @@ $(document).ready(function() {
   $("#subject_typesubject_id").change(function(event) {
     var typesubject_id = $(this).attr("value");
     $.ajax({
-      url: '/subjects/findtypesubject',
+      url: '/etvans/subjects/findtypesubject',
       type: 'POST',
       dataType: 'json',
       data: {id: typesubject_id},
@@ -788,7 +788,7 @@ $(document).ready(function() {
       var first_typesubject = $("#search_typesubject_id_eq option:selected").val();
       
       $.ajax({
-        url: '/subjects/findtypesubject',
+        url: '/etvans/subjects/findtypesubject',
         type: 'POST',
         dataType: 'json',
         data: {id: first_typesubject},
@@ -808,7 +808,7 @@ $(document).ready(function() {
   $("#search_typesubject_id_eq").change(function(event) {
     var typesubject_id = $(this).attr("value");
     $.ajax({
-      url: '/subjects/findtypesubject',
+      url: '/etvans/subjects/findtypesubject',
       type: 'POST',
       dataType: 'json',
       data: {id: typesubject_id},
@@ -833,7 +833,7 @@ $(document).ready(function() {
       var first_typesubject = $("#search_typesubject_id_eq option:selected").val();
       
       $.ajax({
-        url: '/subjects/findtypesubject',
+        url: '/etvans/subjects/findtypesubject',
         type: 'POST',
         dataType: 'json',
         data: {id: first_typesubject},
@@ -853,7 +853,7 @@ $(document).ready(function() {
   $("#search_typesubject_id_eq").change(function(event) {
     var typesubject_id = $(this).attr("value");
     $.ajax({
-      url: '/subjects/findtypesubject',
+      url: '/etvans/subjects/findtypesubject',
       type: 'POST',
       dataType: 'json',
       data: {id: typesubject_id},
@@ -878,7 +878,7 @@ $(document).ready(function() {
       var first_typesubject = $("#search_typesubject_id_eq option:selected").val();
       
       $.ajax({
-        url: '/subjects/findtypesubject',
+        url: '/etvans/subjects/findtypesubject',
         type: 'POST',
         dataType: 'json',
         data: {id: first_typesubject},
@@ -898,7 +898,7 @@ $(document).ready(function() {
   $("#search_typesubject_id_eq").change(function(event) {
     var typesubject_id = $(this).attr("value");
     $.ajax({
-      url: '/subjects/findtypesubject',
+      url: '/etvans/subjects/findtypesubject',
       type: 'POST',
       dataType: 'json',
       data: {id: typesubject_id},
@@ -970,7 +970,7 @@ $(document).ready(function() {
     var first_typesubject = $("#subject_typesubject_id option:selected").val();
     $("#resident-block #subject_resident_id").attr('disabled', true);
     $.ajax({
-      url: '/subjects/findtypesubject',
+      url: '/etvans/subjects/findtypesubject',
       type: 'POST',
       dataType: 'json',
       data: {id: first_typesubject},
@@ -992,7 +992,7 @@ $(document).ready(function() {
   $("#subject_typesubject_id").change(function(event) {
     var typesubject_id = $(this).attr("value");
     $.ajax({
-      url: '/subjects/findtypesubject',
+      url: '/etvans/subjects/findtypesubject',
       type: 'POST',
       dataType: 'json',
       data: {id: typesubject_id},
@@ -1092,7 +1092,7 @@ $(document).ready(function() {
     var active_url = new Array();
     var full_url = name.split('?');
     var active_url = full_url[0].toString().split('/');
-    $("a[href='/reports/"+active_url[4]+"']")
+    $("a[href='/etvans/reports/"+active_url[5]+"']")
       .parent()
       .addClass("active-report-tab");
   }
